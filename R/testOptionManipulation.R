@@ -3,6 +3,9 @@ cleanOption <- function(){
 	options(testOption = empty)
 }
 
+callAddOption <- function(inputString){
+	addOption(inputString)
+}
 
 addOption <- function(inputString){
 	if (is.null(getOption("testOption"))){
