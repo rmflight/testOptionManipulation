@@ -3,6 +3,7 @@ cleanOption <- function(){
 	class(empty) <- "bibentry"
 	useEnv <- which(search() %in% "knitcitationVars")
 	assign("works.cited", empty, pos=useEnv)
+	print("cleanedUp!")
 }
 
 callAddOption <- function(inputString){

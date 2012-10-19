@@ -38,6 +38,8 @@ callAddOption("t2")
 
 ```
 ## t1
+## 
+## t2
 ```
 
 
@@ -51,6 +53,10 @@ get("works.cited", pos = useEnv)
 
 ```
 ## t1
+## 
+## t2
+## 
+## t3
 ```
 
 
