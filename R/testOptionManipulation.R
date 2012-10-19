@@ -4,7 +4,8 @@ cleanOption <- function(){
 }
 
 callAddOption <- function(inputString){
-	addOption(inputString)
+	tmpDat <- addOption(inputString)
+	I(tmpDat)
 }
 
 addOption <- function(inputString){
@@ -15,5 +16,7 @@ addOption <- function(inputString){
 	oldOption <- getOption("testOption")
 	newOption <- c(oldOption, inputString)
 	options(testOption = newOption)
+	
+	newOption
 	
 }
