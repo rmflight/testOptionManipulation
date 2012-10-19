@@ -1,9 +1,12 @@
 Package: testOptionManipulation
 Type: Package
 Title: for testing option manipulation using knitr or knit2html button
-Version: 0.0.1
+Version: 0.0.2
 Date: 2012-10-19
 Author: Robert M Flight
 Maintainer: Robert M Flight <rflight79@gmail.com>
 Description: More about what it does (maybe more than one line)
 License: BSD
+Collate:
+		'testOptionManipulation.R'
+		'zzz.R'

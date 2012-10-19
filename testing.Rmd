@@ -1,21 +1,22 @@
 ```{r setup}
 require(testOptionManipulation)
+useEnv <- which(search() %in% "knitcitationVars")
+useEnv
 ```
 
 ```{r add1}
 callAddOption("t1")
-options()$testOption
 ```
 
 ```{r add2}
 callAddOption("t2")
-options()$testOption
 ```
 
 `r callAddOption("t3")` this is adding inline, is this our problem?
 
 ```{r check1}
-options()$testOption
+useEnv <- which(search() %in% "knitcitationVars")
+get("works.cited", pos=useEnv)
 ```
 
 

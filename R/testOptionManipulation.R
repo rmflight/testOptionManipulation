@@ -1,7 +1,8 @@
 cleanOption <- function(){
 	empty <- character(0)
 	class(empty) <- "bibentry"
-	options(testOption = empty)
+	useEnv <- which(search() %in% "knitcitationVars")
+	assign("works.cited", empty, pos=useEnv)
 }
 
 callAddOption <- function(inputString){
@@ -10,15 +11,17 @@ callAddOption <- function(inputString){
 }
 
 addOption <- function(inputString){
-	if (is.null(getOption("testOption"))){
-		cleanOption
+	useEnv <- which(search() %in% "knitcitationVars")
+	if (!(exists("works.cited", where=useEnv))){
+		cleanOption()
 	}
 	
 	class(inputString) <- "bibentry"
 	
-	oldOption <- getOption("testOption")
+	
+	oldOption <- get("works.cited", pos=useEnv)
 	newOption <- c(oldOption, inputString)
-	options(testOption = newOption)
+	assign("works.cited", newOption, pos=useEnv)
 	
 	newOption
 	

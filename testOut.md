@@ -3,19 +3,6 @@
 require(testOptionManipulation)
 ```
 
-```
-## Loading required package: testOptionManipulation
-```
-
-```r
-useEnv <- which(search() %in% "knitcitationVars")
-useEnv
-```
-
-```
-## [1] 3
-```
-
 
 
 ```r
@@ -23,7 +10,13 @@ callAddOption("t1")
 ```
 
 ```
-## Error: object 'works.cited' not found
+## t1
+## 
+## t2
+## 
+## t3
+## 
+## t1
 ```
 
 
@@ -33,20 +26,19 @@ callAddOption("t2")
 ```
 
 ```
-## Error: object 'works.cited' not found
+## t1
+## 
+## t2
+## 
+## t3
+## 
+## t1
+## 
+## t2
 ```
 
 
-
-
-```
-
-Error in get("works.cited", pos = useEnv) : 
-  object 'works.cited' not found
-
-```
-
- this is adding inline, is this our problem?
+t1, t2, t3, t1, t2, t3 this is adding inline, is this our problem?
 
 
 ```r
@@ -55,7 +47,17 @@ get("works.cited", pos = useEnv)
 ```
 
 ```
-## Error: object 'works.cited' not found
+## t1
+## 
+## t2
+## 
+## t3
+## 
+## t1
+## 
+## t2
+## 
+## t3
 ```
 
 
@@ -80,7 +82,7 @@ sessionInfo()
 ## [1] stats     graphics  grDevices utils     datasets  methods   base     
 ## 
 ## other attached packages:
-## [1] testOptionManipulation_0.0.1 knitr_0.8                   
+## [1] knitr_0.8                    testOptionManipulation_0.0.1
 ## 
 ## loaded via a namespace (and not attached):
 ## [1] bibtex_0.3-3   digest_0.5.2   evaluate_0.4.2 formatR_0.6   
