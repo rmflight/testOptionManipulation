@@ -10,7 +10,14 @@ require(testOptionManipulation)
 
 
 ```r
-addOption("t1")
+callAddOption("t1")
+```
+
+```
+## [1] "t1"
+```
+
+```r
 options()$testOption
 ```
 
@@ -21,7 +28,14 @@ options()$testOption
 
 
 ```r
-addOption("t2")
+callAddOption("t2")
+```
+
+```
+## [1] "t1" "t2"
+```
+
+```r
 options()$testOption
 ```
 
@@ -30,7 +44,7 @@ options()$testOption
 ```
 
 
-`c("t1", "t2")` this is adding inline, is this our problem?
+t1, t2, t3 this is adding inline, is this our problem?
 
 
 ```r
