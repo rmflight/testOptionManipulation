@@ -3,16 +3,16 @@ require(testOptionManipulation)
 ```
 
 ```{r add1}
-addOption("t1")
+callAddOption("t1")
 options()$testOption
 ```
 
 ```{r add2}
-addOption("t2")
+callAddOption("t2")
 options()$testOption
 ```
 
-`r addOption("t3")` this is adding inline, is this our problem?
+`r callAddOption("t3")` this is adding inline, is this our problem?
 
 ```{r check1}
 options()$testOption
